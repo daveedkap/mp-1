@@ -1,0 +1,256 @@
+/* Reset margin and sizings for all pages */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Center page */
+#page-wrapper{
+    width: 80vw;
+    margin: 0 auto;
+}
+
+/* Header styling */
+header {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5vh 1.5vw; /* Slightly larger padding */
+    background-color: #2c3e50; /* Dark blue-gray */
+    color: #ecf0f1; /* Light gray text */
+}
+
+/* Two-column container styling */
+#container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: #2c3e50; /* Darker blue-gray */
+}
+
+/* Navigation styling */
+nav {
+    width: 30%; 
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #2c3e50; /* Same as container */
+    font-size: calc(1.5px + 1.5vw); /* Slightly smaller font size */
+    text-align: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+nav li {
+    font-size: calc(2px + 2vw); /* Responsive font size */
+    width: 90%;
+    background-color: #8085e5; /* Slight blue-ish */
+    padding: 1.5vh 0; /* Slightly smaller padding */
+    margin: 4vh auto; /* Slightly smaller margin */
+    border-radius: 5px; /* Rounded corners */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* White text */
+}
+
+/* Main content styling */
+main {
+    display: flex;
+    flex-direction: column;
+    width: 70%; /* 70% of container width */
+    background-color: #acb5b7; /* Light gray */
+    padding: 2vh 2vw; /* Padding for spacing */
+}
+
+main p {
+    margin: 0 1vw;
+    font-size: calc(1.5px + 1.5vw); 
+    color: #2c3e50; /* Darkish blue-gray text */
+}
+
+/* Image styling */
+#profile-photo, #experience-photo, #education-photo, #certification-photo, #achievement-photo {
+    max-width: 100%;
+    border-radius: 10px; /* For rounded corners */
+}
+
+/* Flexbox layout for main content */
+#main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 2vh 2vw;
+}
+
+#main-text {
+    align-self: center;
+    width: 60%;
+    margin: 1vh 1vw;
+}
+
+#main-image{
+    width: 40%;
+    margin: 1vh 1vw;
+}
+
+#main-title {
+    margin: 2vw 0;
+    text-align: center;
+    font-size: calc(2px + 2vw); /* Responsive font size */
+    color: #646464; /* Greyish */
+}
+
+/* Footer styling */
+footer {
+    background-color: #2e3f50; /* Dark blue-gray */
+    color: #d5d7d8; /* Light gray text */
+    padding: 1.5vh 1.5vw; /* Slightly larger padding */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+footer a {
+    color: #b0b1b1; /* Light gray text */
+}
+
+/* Calculator section */
+#calculator-link {
+    text-align: center;
+    margin: 4vh 0;
+}
+
+.calculator-button {
+    display: flex;
+    padding: 1.5vh 3vw;
+    font-size: calc(3px + 2vw);
+    background-color: #090536;
+    color: #fff;
+    border-radius: 5px; /* Rounded edges */
+}
+
+.calculator-button:hover {
+    background-color: #1d3266;
+}
+
+
+@media screen and (max-width: 750px) {
+    header{
+        align-items: center;
+    }
+
+    #container{
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav li{
+        font-size: calc(1.5px + 1.5vw);
+        padding: 1% .5%;
+        margin: 1% .5%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        height: 100vh;
+    }
+
+    main p{
+        margin: 2% 2%;
+        font-size: calc(2px + 3vw);
+    }
+
+    #main-text{
+        align-self: center;
+        width: 100%;
+        margin: 1vh 1vw;
+    }
+
+    #main-image{
+        margin: 1vh auto;
+    }
+}
+
+/* Custom fonts from Google  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Use google Roboto font */
+}
+
+/* Calculator Page Styles */
+#calculator {
+    margin: 2vh auto;
+    padding: 2vh 2vw;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 400px; /* Limit calculator width */
+}
+
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.input-group input {
+    padding: 1vh 1vw;
+    font-size: calc(6px + 1vw);
+    border-radius: 5px;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vh;
+    justify-content: center;
+}
+
+.button-group button {
+    padding: 1.5vh 2vw;
+    font-size: calc(10px + 1vw);
+    background-color: #2c3e50;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#output-container {
+    text-align: center;
+    margin-top: 2vh;
+}
+
+#output {
+    font-size: calc(14px + 1vw);
+    color: #2c3e50;
+}
+
+#output.negative {
+    color: red;
+}

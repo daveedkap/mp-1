@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Calculator for David Kaplansky's Personal Project Page">
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <title>Calculator - Resume</title>
+    </head>
+    <body>
+        <div id="page-wrapper">
+            <header>
+                <h1>JavaScript Calculator</h1>
+                <p>A simple calculator built with JavaScript.</p>
+            </header>
+
+            <main>
+                <div id="calculator">
+                    <div class="calculator-container">
+
+                        <div class="input-group">
+                            <input type="text" id="first-number" placeholder="Enter first number">
+                            <input type="text" id="second-number" placeholder="Enter second number">
+                        </div>
+
+                        <div class="button-group">
+                            <button onclick="addition()">+</button>
+                            <button onclick="subtraction()">-</button>
+                            <button onclick="multiplication()">*</button>
+                            <button onclick="division()">/</button>
+                            <button onclick="power()">**</button>
+                            <button onclick="clearInputs()">Clear</button>
+                        </div>
+
+                        <div id="output-container">
+                            <p id="output"></p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <p>All Rights Reserved by David Kaplansky <a href="credits.html"> Credits</a> &copy;</p>
+            </footer>
+        </div>
+        <script src="calculator.js"></script>
+    </body>
+</html>
