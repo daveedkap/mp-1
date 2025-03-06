@@ -142,7 +142,8 @@ footer a {
 
 @media screen and (max-width: 750px) {
     header{
-        align-items: center;
+        text-align: center;
+        margin: auto;
     }
 
     #container{
